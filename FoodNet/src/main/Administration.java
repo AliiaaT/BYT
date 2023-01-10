@@ -11,6 +11,7 @@ public class Administration extends RestaurantEmployee {
     public Administration() {
     }
 
+
     public String buyAdvertisement(Advertisement advertisement){
         String answer = "Congratulations! You have bought the advertisement of " + advertisement.getType() +" type. It will be valid for "+advertisement.getDuration()+" days.";
         return answer;
