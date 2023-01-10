@@ -14,7 +14,7 @@ public class Main {
         Advertisement standart = new Advertisement("standart", 100, 5);
         BankAccount millenuimAccount = new BankAccount(121314, "Ola Nowak's account", 10000);
 
-        Administration Ola = new Administration("aliia","temirbek kyzy",
+        Administration Ola = new Administration("Ola","Nowak kyzy",
                 "adsdfsdfsd", "gmail", 444,
                 "male", 5000, "ola", "3333", millenuimAccount);
         Ola.buyAdvertisement(standart);
