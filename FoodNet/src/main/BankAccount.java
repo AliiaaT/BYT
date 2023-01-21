@@ -5,6 +5,8 @@ public class BankAccount {
     private String name;
     private int amountMoney;
 
+    Administration administration = new Administration();
+
     public BankAccount(int accountNumber, String name, int amountMoney) {
         AccountNumber = accountNumber;
         this.name = name;

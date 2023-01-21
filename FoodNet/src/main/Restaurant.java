@@ -1,5 +1,6 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant {
@@ -8,20 +9,33 @@ public class Restaurant {
     private String address;
     private int phoneNumber;
     private Location locationCoordinate;
-    private List<String> listOfFeedbacks;
 
-    public Restaurant(String name, String menu, String address, int phoneNumber, List<String> listOfFeedbacks) {
+    List<RestaurantEmployee> employees = new ArrayList<>();
+
+    public void addEmployee(RestaurantEmployee newEmployee){
+        if(!employees.contains(newEmployee)){
+            employees.add(newEmployee);
+        }
+    }
+
+    public Restaurant(String name, String menu, String address, int phoneNumber) {
         this.name = name;
         this.menu = menu;
         this.address = address;
         this.phoneNumber = phoneNumber;
-        this.listOfFeedbacks = listOfFeedbacks;
     }
 
 
     public Restaurant(String name, String address) {
         this.name = name;
         this.address = address;
+    }
+
+    public Restaurant(String name) {
+        this.name = name;
+    }
+
+    public Restaurant() {
     }
 
     public String getName() {
@@ -66,11 +80,11 @@ public class Restaurant {
         this.locationCoordinate = locationCoordinate;
     }
 
-    public List<String> getListOfFeedbacks() {
-        return listOfFeedbacks;
-    }
-
-    public void setListOfFeedbacks(List<String> listOfFeedbacks) {
-        this.listOfFeedbacks = listOfFeedbacks;
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "name='" + name + '\'' +
+                ", employees=" + employees +
+                '}';
     }
 }

@@ -1,10 +1,14 @@
 package main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Advertisement {
     private String type;
     private int price;
     private int duration;
 
+Administration administration = new Administration();
     public Advertisement(String type, int price, int duration) {
         this.type = type;
         this.price = price;

@@ -4,6 +4,8 @@ public class Location {
     private String coordinate;
     private String description;
 
+    Restaurant restaurant = new Restaurant(); //1 to 1 connection
+
     public Location(String coordinate, String description) {
         this.coordinate = coordinate;
         this.description = description;

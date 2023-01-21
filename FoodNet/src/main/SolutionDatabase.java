@@ -6,12 +6,11 @@ import java.util.List;
 public class SolutionDatabase {
     private int id;
     private String type;
-    private List<Solution> solution = new ArrayList<>();
 
-    public SolutionDatabase(int id, String type, List<Solution> solution) {
+
+    public SolutionDatabase(int id, String type) {
         this.id = id;
         this.type = type;
-        this.solution = solution;
     }
 
     public int getId() {
@@ -30,17 +29,12 @@ public class SolutionDatabase {
         this.type = type;
     }
 
-    public List<Solution> getSolution() {
-        return solution;
+    @Override
+    public String toString() {
+        return "SolutionDatabase{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                '}';
     }
-
-    public void setSolution(List<Solution> solution) {
-        this.solution = solution;
-    }
-
-    class Solution{
-
-    }
-
 }
 

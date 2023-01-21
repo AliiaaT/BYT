@@ -5,6 +5,8 @@ public class RestaurantEmployee extends Person {
     private String user_name;
     private String password;
 
+    Restaurant restaurant = new Restaurant();
+
     public RestaurantEmployee(String first_name, String last_name, String personalData, String email_address, int phone_number, String gender, int sal, String user_name, String password) {
         super(first_name, last_name, personalData, email_address, phone_number, gender);
         this.sal = sal;
@@ -13,6 +15,10 @@ public class RestaurantEmployee extends Person {
     }
 
     public RestaurantEmployee() {
+    }
+
+    public RestaurantEmployee(String user_name) {
+        this.user_name = user_name;
     }
 
     public int getSal() {
@@ -48,5 +54,12 @@ public class RestaurantEmployee extends Person {
             System.out.println("You entered incorrect data");
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "RestaurantEmployee{" +
+                "user_name='" + user_name + '\'' +
+                '}';
     }
 }
